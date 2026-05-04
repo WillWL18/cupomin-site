@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre no grupo de promoções da Cupomin e receba ofertas diárias de produtos infantis e de bebê com descontos reais.">
+  <title>Cupomin | Promoções para Bebês e Crianças no WhatsApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-royal: #0056D2;
+      --blue-navy: #1a2744;
+      --white: #FFFFFF;
+      --blue-soft: #E8F4FD;
+      --yellow-soft: #FFF8E1;
+      --pink-soft: #FCE4EC;
+      --wa-green: #25D366;
+      --text-main: #23314d;
+      --text-soft: #5a6883;
+      --border-soft: rgba(0, 86, 210, 0.12);
+      --shadow-soft: 0 18px 45px rgba(26, 39, 68, 0.12);
+      --shadow-strong: 0 24px 55px rgba(26, 39, 68, 0.18);
+      --radius-lg: 24px;
+      --radius-xl: 30px;
+      --radius-pill: 999px;
+      --container: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Nunito", sans-serif;
+      color: var(--text-main);
+      background: linear-gradient(180deg, #f5faff 0%, #ffffff 35%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    section[id] {
+      scroll-margin-top: 96px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 1.5rem));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .section-heading {
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 0.9rem;
+      margin-bottom: 1rem;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 86, 210, 0.08);
+      color: var(--blue-royal);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.9rem, 5vw, 3.1rem);
+      line-height: 1.1;
+      color: var(--blue-navy);
+    }
+
+    .section-copy {
+      margin: 1rem auto 0;
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 36rem;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      padding: 0.85rem 0;
+      transition: transform 0.35s ease, padding 0.35s ease;
+    }
+
+    .header-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.9rem;
+      padding: 0.7rem 0.85rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 8px 24px rgba(9, 20, 44, 0.12);
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .site-header.scrolled .header-shell {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(0, 86, 210, 0.12);
+      box-shadow: 0 16px 40px rgba(26, 39, 68, 0.12);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+      color: var(--white);
+      transition: color 0.3s ease;
+    }
+
+    .site-header.scrolled .brand {
+      color: var(--blue-navy);
+    }
+
+    .logo-mark {
+      width: 3rem;
+      height: 3rem;
+      flex: 0 0 auto;
+      display: block;
+      line-height: 0;
+    }
+
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      font-size: 0.94rem;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .site-header.scrolled .header-cta {
+      background: var(--blue-navy);
+      border-color: transparent;
+      color: var(--white);
+    }
+
+    .header-cta:hover,
+    .header-cta:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 100svh;
+      padding: 7rem 0 4.25rem;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.16), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(252, 228, 236, 0.18), transparent 20%),
+        radial-gradient(circle at 78% 75%, rgba(255, 248, 225, 0.14), transparent 22%),
+        linear-gradient(140deg, #15213b 0%, #1a2744 28%, #0056D2 72%, #2b8cff 100%);
+      background-size: 200% 200%;
+      animation: bgPulse 8s ease infinite;
+      will-change: background-position;
+      color: var(--white);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(4px);
+      animation: morphBlob 16s ease-in-out infinite alternate;
+      will-change: transform, border-radius;
+    }
+
+    .hero::before {
+      top: -7rem;
+      left: -6rem;
+      width: 18rem;
+      height: 18rem;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    .hero::after {
+      right: -7rem;
+      bottom: -6rem;
+      width: 19rem;
+      height: 19rem;
+      background: rgba(0, 86, 210, 0.15);
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      animation-duration: 14s;
+      animation-direction: alternate-reverse;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 40rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      margin: 1.1rem 0 1rem;
+      font-size: clamp(2.5rem, 8vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-lead {
+      margin: 0;
+      font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 35rem;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      min-height: 3.75rem;
+      padding: 1rem 1.45rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: linear-gradient(135deg, #2edc71 0%, #1fb35a 100%);
+      color: var(--white);
+      font-size: 1.02rem;
+      font-weight: 900;
+      box-shadow: 0 18px 38px rgba(37, 211, 102, 0.28);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 24px 44px rgba(37, 211, 102, 0.34);
+    }
+
+    .cta-button--large {
+      width: 100%;
+      max-width: 28rem;
+      font-size: 1.08rem;
+      padding: 1.15rem 1.65rem;
+    }
+
+    .cta-icon {
+      width: 1.35rem;
+      height: 1.35rem;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .hero-cta-group {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .proof-inline {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.6rem;
+    }
+
+    .hero-chip {
+      padding: 0.7rem 0.95rem;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 1.4rem;
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 24px 60px rgba(9, 20, 44, 0.22);
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -2rem -3rem auto;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+      filter: blur(8px);
+    }
+
+    .mini-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .hero-card h2 {
+      margin: 1rem 0 0.7rem;
+      font-size: 1.65rem;
+      line-height: 1.15;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .offer-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+    }
+
+    .offer-item {
+      position: relative;
+      z-index: 1;
+      padding: 1rem 1rem 1rem 1.05rem;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 10px 24px rgba(9, 20, 44, 0.12);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .offer-item:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(0, 86, 210, 0.35);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .offer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .offer-label {
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #d8ecff;
+    }
+
+    .offer-pill {
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 248, 225, 0.2);
+      color: #fff6d6;
+      font-size: 0.76rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .offer-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .offer-copy {
+      margin: 0.25rem 0 0;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-decor,
+    .floating-item {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      animation: float 6s ease-in-out infinite;
+      filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.12));
+      will-change: transform;
+      line-height: 1;
+    }
+
+    .hero-decor.emoji {
+      font-size: clamp(1.2rem, 2.2vw, 1.9rem);
+      opacity: 0.75;
+    }
+
+    .floating-item {
+      opacity: 0.76;
+    }
+
+    .hero-decor.dot {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .hero-decor.star {
+      width: 0.9rem;
+      height: 0.9rem;
+      background: #ffffff;
+      clip-path: polygon(50% 0%, 61% 36%, 100% 50%, 61% 64%, 50% 100%, 39% 64%, 0% 50%, 39% 36%);
+      opacity: 0.72;
+    }
+
+    .decor-1 { top: 8.5rem; left: 7%; animation-delay: -1s; }
+    .decor-2 { top: 11rem; right: 8%; animation-duration: 7.5s; }
+    .decor-3 { top: 22rem; left: 4%; background: #fff0ae; animation-delay: -2.6s; }
+    .decor-4 { right: 12%; bottom: 10rem; animation-duration: 8s; }
+    .decor-5 { top: 16rem; right: 32%; background: #c4e6ff; animation-delay: -3s; }
+    .decor-6 { left: 48%; bottom: 8rem; animation-duration: 7.2s; }
+
+    .hero-blob {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(6px);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: morphBlob 18s ease-in-out infinite alternate;
+      will-change: transform, border-radius;
+    }
+
+    .hero-blob-3 {
+      top: 34%;
+      left: 48%;
+      width: 12rem;
+      height: 12rem;
+      background: rgba(255, 255, 255, 0.04);
+      transform: translate(-50%, -50%);
+    }
+
+    .particle {
+      position: absolute;
+      z-index: 0;
+      border-radius: 999px;
+      pointer-events: none;
+      opacity: 0.12;
+      animation: floatUp 7s linear infinite;
+      will-change: transform, opacity;
+    }
+
+    .particle-1 { left: 4%; bottom: 10%; width: 8px; height: 8px; background: rgba(255, 255, 255, 0.18); animation-duration: 4.8s; animation-delay: -1.4s; }
+    .particle-2 { left: 11%; bottom: 18%; width: 14px; height: 14px; background: rgba(196, 230, 255, 0.16); animation-duration: 6.2s; animation-delay: -2.2s; }
+    .particle-3 { left: 18%; bottom: 8%; width: 6px; height: 6px; background: rgba(255, 255, 255, 0.14); animation-duration: 5.3s; animation-delay: -0.8s; }
+    .particle-4 { left: 26%; bottom: 22%; width: 18px; height: 18px; background: rgba(255, 255, 255, 0.1); animation-duration: 8.4s; animation-delay: -3.6s; }
+    .particle-5 { left: 34%; bottom: 12%; width: 10px; height: 10px; background: rgba(196, 230, 255, 0.18); animation-duration: 6.9s; animation-delay: -2.8s; }
+    .particle-6 { left: 43%; bottom: 18%; width: 16px; height: 16px; background: rgba(255, 255, 255, 0.12); animation-duration: 9.1s; animation-delay: -4.4s; }
+    .particle-7 { left: 55%; bottom: 9%; width: 7px; height: 7px; background: rgba(196, 230, 255, 0.18); animation-duration: 4.6s; animation-delay: -1.1s; }
+    .particle-8 { left: 63%; bottom: 20%; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.09); animation-duration: 8.8s; animation-delay: -3.1s; }
+    .particle-9 { left: 71%; bottom: 14%; width: 12px; height: 12px; background: rgba(196, 230, 255, 0.16); animation-duration: 5.8s; animation-delay: -2.5s; }
+    .particle-10 { left: 79%; bottom: 7%; width: 9px; height: 9px; background: rgba(255, 255, 255, 0.16); animation-duration: 7.6s; animation-delay: -3.8s; }
+    .particle-11 { left: 87%; bottom: 16%; width: 15px; height: 15px; background: rgba(196, 230, 255, 0.14); animation-duration: 6.6s; animation-delay: -1.9s; }
+    .particle-12 { left: 93%; bottom: 11%; width: 11px; height: 11px; background: rgba(255, 255, 255, 0.14); animation-duration: 9.8s; animation-delay: -4.7s; }
+
+    .benefits {
+      background:
+        radial-gradient(circle at left top, rgba(232, 244, 253, 0.9), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .benefit-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .benefit-card {
+      padding: 1.35rem;
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .benefit-icon {
+      width: 3.4rem;
+      height: 3.4rem;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      font-size: 1.7rem;
+      background: linear-gradient(135deg, rgba(0, 86, 210, 0.14), rgba(232, 244, 253, 0.86));
+      margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      color: var(--blue-navy);
+    }
+
+    .benefit-card p {
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .categories {
+      background: linear-gradient(180deg, #ffffff 0%, #fdfefe 100%);
+    }
+
+    .category-cloud {
+      display: grid;
+      gap: 0.95rem;
+      justify-content: center;
+    }
+
+    .category-pill-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 3.25rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(0, 86, 210, 0.12);
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: var(--blue-navy);
+      box-shadow: 0 10px 24px rgba(26, 39, 68, 0.07);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      will-change: transform, background-color, color, border-color, box-shadow;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .category-pill-card:hover {
+      transform: scale(1.08);
+      background-color: #0056D2;
+      color: #ffffff;
+      border-color: #0056D2;
+      opacity: 1;
+      visibility: visible;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .category-pill-card:nth-child(4n + 1) {
+      background: rgba(232, 244, 253, 0.95);
+    }
+
+    .category-pill-card:nth-child(4n + 2) {
+      background: rgba(255, 248, 225, 0.95);
+    }
+
+    .category-pill-card:nth-child(4n + 3) {
+      background: rgba(252, 228, 236, 0.95);
+    }
+
+    .category-pill-card:nth-child(4n + 4) {
+      background: rgba(245, 250, 255, 0.98);
+    }
+
+    .category-cloud .category-pill-card:hover {
+      transform: scale(1.08);
+      background-color: #0056D2;
+      color: #ffffff;
+      border-color: #0056D2;
+      opacity: 1;
+      visibility: visible;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .social-proof {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 14%, rgba(58, 133, 255, 0.18), transparent 22%),
+        radial-gradient(circle at 86% 72%, rgba(255, 248, 225, 0.12), transparent 20%),
+        var(--blue-navy);
+      color: var(--white);
+    }
+
+    .social-proof .section-title,
+    .social-proof .section-copy {
+      color: var(--white);
+    }
+
+    .social-proof .section-copy {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .social-proof .section-tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: #d9eaff;
+    }
+
+    .stats-grid,
+    .testimonial-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .stat-card {
+      padding: 1.35rem;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .stat-card.reveal {
+      transition: opacity 0.8s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 86, 210, 0.4);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .stat-value {
+      margin: 0;
+      font-size: clamp(2.35rem, 8vw, 3.8rem);
+      line-height: 1;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .stat-label {
+      margin: 0.75rem 0 0;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .testimonial-grid {
+      margin-top: 1.5rem;
+    }
+
+    .testimonial-card {
+      position: relative;
+      padding: 1.35rem;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 250, 255, 0.98) 100%);
+      color: var(--text-main);
+      box-shadow: 0 18px 40px rgba(12, 24, 50, 0.16);
+      cursor: pointer;
+      transition: opacity 0.8s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform, box-shadow;
+      overflow: hidden;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 86, 210, 0.3);
+    }
+
+    .testimonial-card p {
+      margin: 0 0 1.1rem;
+      color: var(--text-main);
+    }
+
+    .testimonial-stars {
+      margin-bottom: 0.65rem;
+      color: #f5b301;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+
+    .testimonial-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.28rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(5, 150, 105, 0.1);
+      color: #059669;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      border: 1px solid rgba(5, 150, 105, 0.18);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .avatar {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-royal), #4da1ff);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 900;
+      box-shadow: 0 12px 24px rgba(0, 86, 210, 0.2);
+      flex: 0 0 auto;
+    }
+
+    .avatar--amanda {
+      background: linear-gradient(135deg, #0056D2, #4da1ff);
+      box-shadow: 0 12px 24px rgba(0, 86, 210, 0.2);
+    }
+
+    .avatar--renata {
+      background: linear-gradient(135deg, #7C3AED, #a78bfa);
+      box-shadow: 0 12px 24px rgba(124, 58, 237, 0.22);
+    }
+
+    .avatar--camila {
+      background: linear-gradient(135deg, #059669, #34d399);
+      box-shadow: 0 12px 24px rgba(5, 150, 105, 0.22);
+    }
+
+    .author-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--blue-navy);
+    }
+
+    .author-note {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .author-time {
+      margin-top: 0.15rem;
+      font-size: 0.78rem;
+      color: #97a4ba;
+    }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255, 248, 225, 0.24), transparent 22%),
+        radial-gradient(circle at 78% 28%, rgba(252, 228, 236, 0.28), transparent 24%),
+        linear-gradient(135deg, #0056D2 0%, #1a2744 55%, #0c7bff 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .final-cta-inner {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2rem 1.1rem;
+    }
+
+    .final-cta .section-title,
+    .final-cta .section-copy {
+      color: var(--white);
+    }
+
+    .final-cta .section-tag {
+      background: rgba(255, 255, 255, 0.12);
+      color: #e8f4ff;
+    }
+
+    .final-cta .section-copy {
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .pulse {
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+
+    .microcopy {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .site-footer {
+      padding: 1.8rem 0;
+      background: #13203a;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .footer-shell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.88);
+      font-weight: 800;
+    }
+
+    .footer-icon {
+      width: 1.15rem;
+      height: 1.15rem;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .footer-copy {
+      margin: 0;
+      font-size: 0.92rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(0, -14px, 0);
+      }
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(-120px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes morphBlob {
+      0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+    }
+
+    @keyframes bgPulse {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 18px 38px rgba(37, 211, 102, 0.28);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 24px 48px rgba(37, 211, 102, 0.38);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background:
+          radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.22), transparent 22%),
+          radial-gradient(circle at 86% 20%, rgba(77, 161, 255, 0.26), transparent 22%),
+          radial-gradient(circle at 78% 75%, rgba(255, 248, 225, 0.18), transparent 24%),
+          linear-gradient(140deg, #101a33 0%, #16315f 30%, #0056D2 68%, #3090ff 100%);
+        background-size: 300% 300%;
+        animation-duration: 5s;
+      }
+
+      .hero::before {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .hero::after {
+        background: rgba(0, 86, 210, 0.25);
+      }
+
+      .hero-blob {
+        background: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        width: min(var(--container), calc(100% - 2rem));
+      }
+
+      .hero-card {
+        padding: 1.7rem;
+      }
+
+      .benefit-grid,
+      .stats-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .category-cloud {
+        grid-template-columns: repeat(2, minmax(0, max-content));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 5.5rem 0;
+      }
+
+      .hero {
+        padding: 8rem 0 5rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+        gap: 2rem;
+      }
+
+      .hero-cta-group {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-button--large {
+        width: auto;
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .category-cloud {
+        grid-template-columns: repeat(3, minmax(0, max-content));
+      }
+
+      .footer-shell {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .header-shell {
+        padding: 0.85rem 1rem;
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .testimonial-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .category-cloud {
+        grid-template-columns: repeat(4, minmax(0, max-content));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+      <path d="M19.1 17.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.8.1-.2.3-.9 1-.9 1.1-.2.2-.4.2-.7.1-.3-.1-1.4-.5-2.6-1.6-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.1-.6.1-.1.3-.3.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.9 4.1 2.9 1.1 2.9.8 3.4.8.5 0 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+      <path d="M16 2.9C8.8 2.9 3 8.5 3 15.4c0 2.2.6 4.4 1.8 6.2L3 29.1l7.7-1.8c1.7.9 3.5 1.3 5.3 1.3 7.2 0 13-5.6 13-12.5 0-3.4-1.3-6.5-3.8-8.8-2.4-2.7-5.7-4.4-9.2-4.4zm0 23.5c-1.6 0-3.2-.4-4.6-1.2l-.3-.2-4.6 1.1 1.2-4.5-.2-.3c-1-1.5-1.5-3.2-1.5-4.9 0-5.8 4.5-10.4 10.1-10.4 2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.2 0 5.8-4.6 10.3-10.1 10.3z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zm9.75 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4z"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="container">
+      <div class="header-shell">
+        <a class="brand" href="#topo" aria-label="Cupomin">
+          <span class="logo-mark" aria-hidden="true">
+            <img src="cupomin-logo.png" alt="">
+          </span>
+          <span class="brand-name">@cupomin</span>
+        </a>
+        <a class="header-cta" href="#cta-final">Entrar no grupo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-decor emoji decor-1" aria-hidden="true">⭐</span>
+      <span class="hero-decor emoji decor-2" aria-hidden="true">🧸</span>
+      <span class="hero-decor dot decor-3" aria-hidden="true"></span>
+      <span class="hero-decor emoji decor-4" aria-hidden="true">🍼</span>
+      <span class="hero-decor dot decor-5" aria-hidden="true"></span>
+      <span class="hero-decor star decor-6" aria-hidden="true"></span>
+      <span class="floating-item" style="left: 3%; top: 18%; font-size: 1.35rem; animation-delay: 0.8s; animation-duration: 7.2s;" aria-hidden="true">⭐</span>
+      <span class="floating-item" style="left: 12%; top: 64%; font-size: 1.8rem; animation-delay: 3.1s; animation-duration: 6.4s;" aria-hidden="true">🧸</span>
+      <span class="floating-item" style="left: 8%; top: 46%; font-size: 1.55rem; animation-delay: 2.2s; animation-duration: 8.6s;" aria-hidden="true">🍼</span>
+      <span class="floating-item" style="right: 5%; top: 28%; font-size: 1.45rem; animation-delay: 1.4s; animation-duration: 8.1s;" aria-hidden="true">⭐</span>
+      <span class="floating-item" style="right: 18%; top: 72%; font-size: 1.32rem; animation-delay: 4.4s; animation-duration: 5.7s;" aria-hidden="true">🍼</span>
+      <span class="floating-item" style="right: 10%; top: 56%; font-size: 1.7rem; animation-delay: 5.2s; animation-duration: 7.4s;" aria-hidden="true">🧸</span>
+      <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+      <div class="particle particle-1" aria-hidden="true"></div>
+      <div class="particle particle-2" aria-hidden="true"></div>
+      <div class="particle particle-3" aria-hidden="true"></div>
+      <div class="particle particle-4" aria-hidden="true"></div>
+      <div class="particle particle-5" aria-hidden="true"></div>
+      <div class="particle particle-6" aria-hidden="true"></div>
+      <div class="particle particle-7" aria-hidden="true"></div>
+      <div class="particle particle-8" aria-hidden="true"></div>
+      <div class="particle particle-9" aria-hidden="true"></div>
+      <div class="particle particle-10" aria-hidden="true"></div>
+      <div class="particle particle-11" aria-hidden="true"></div>
+      <div class="particle particle-12" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-tag">Promoções infantis que valem a pena salvar</div>
+          <h1>Descontos que aliviam o bolso e ajudam no cuidado de quem você mais ama</h1>
+          <p class="hero-lead">
+            Entre no grupo da Cupomin e receba ofertas diárias de produtos para bebês e crianças, com alertas rápidos, preços reais e achadinhos que toda mamãe ama compartilhar.
+          </p>
+          <div class="hero-cta-group">
+            <a
+              class="cta-button cta-button--large"
+              href="https://chat.whatsapp.com/KNEoRWEffjGEBkV5vLSP8K"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="cta-icon" aria-hidden="true">
+                <use href="#icon-whatsapp"></use>
+              </svg>
+              Entrar no grupo VIP do WhatsApp
+            </a>
+            <span class="proof-inline">Gratuito • Sem spam • Saia quando quiser</span>
+          </div>
+          <div class="hero-chip-list" aria-label="Destaques do grupo">
+            <span class="hero-chip">Fraldas, brinquedos e berços</span>
+            <span class="hero-chip">Alertas relâmpago em tempo real</span>
+            <span class="hero-chip">Achadinhos todos os dias</span>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-label="Resumo do grupo Cupomin">
+          <span class="mini-badge">Comunidade feita para mães atentas</span>
+          <h2>Receba só o que faz sentido para a rotina da sua família</h2>
+          <p>
+            O foco é simples: encontrar promoções boas de verdade em categorias infantis e entregar tudo de forma prática, direto no seu WhatsApp.
+          </p>
+
+          <div class="offer-list">
+            <article class="offer-item">
+              <div class="offer-top">
+                <span class="offer-label">Até 80% off</span>
+                <span class="offer-pill">Mais buscados</span>
+              </div>
+              <p class="offer-title">Cuidados do dia a dia com desconto real</p>
+              <p class="offer-copy">Fraldas, lenços, mamadeiras, higiene e itens que acabam rápido.</p>
+            </article>
+
+            <article class="offer-item">
+              <div class="offer-top">
+                <span class="offer-label">Alerta rápido</span>
+                <span class="offer-pill">Sem enrolação</span>
+              </div>
+              <p class="offer-title">Promoções relâmpago enviadas na hora certa</p>
+              <p class="offer-copy">Você entra, vê o link e decide rápido antes da oferta acabar.</p>
+            </article>
+
+            <article class="offer-item">
+              <div class="offer-top">
+                <span class="offer-label">Seleção cuidadosa</span>
+                <span class="offer-pill">Qualidade</span>
+              </div>
+              <p class="offer-title">Produtos infantis que passam confiança</p>
+              <p class="offer-copy">Cupomin prioriza ofertas úteis, originais e com boa reputação.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section benefits" id="beneficios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-tag">O que você vai receber</div>
+          <h2 class="section-title">Tudo pensado para facilitar a busca por ofertas para seu bebê</h2>
+          <p class="section-copy">
+            Menos tempo procurando, mais chance de aproveitar promoções úteis para a rotina da casa, do enxoval ao presente perfeito.
+          </p>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">🍼</div>
+            <h3>Até 80% OFF em itens essenciais</h3>
+            <p>Achados para bebê e infância com preços realmente interessantes nas categorias que mais pesam no orçamento.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">🧸</div>
+            <h3>Variedade para cada fase</h3>
+            <p>Brinquedos, berços, cadeirinhas, roupinhas, alimentação e muito mais reunidos em um só lugar.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">⚡</div>
+            <h3>Alertas em tempo real</h3>
+            <p>Quando aparece uma promoção boa, o grupo avisa rápido para você não perder as ofertas relâmpago.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">✅</div>
+            <h3>Mais confiança na escolha</h3>
+            <p>Seleção com foco em produtos originais, úteis e de qualidade verificada para a rotina das famílias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories" id="categorias">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-tag">Categorias em destaque</div>
+          <h2 class="section-title">As ofertas que mais chamam atenção no grupo</h2>
+          <p class="section-copy">
+            Da troca de fralda ao quartinho completo, a Cupomin reúne as categorias que as mães mais procuram todos os dias.
+          </p>
+        </div>
+
+        <div class="category-cloud reveal" aria-label="Categorias de produtos">
+          <span class="category-pill-card">Fraldas &amp; Higiene</span>
+          <span class="category-pill-card">Berços &amp; Móveis</span>
+          <span class="category-pill-card">Cadeirinhas</span>
+          <span class="category-pill-card">Roupinhas</span>
+          <span class="category-pill-card">Brinquedos</span>
+          <span class="category-pill-card">Eletrônicos para Bebê</span>
+          <span class="category-pill-card">Alimentação</span>
+          <span class="category-pill-card">Segurança</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section social-proof js-counters" id="prova-social">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-tag">Prova social</div>
+          <h2 class="section-title">Uma comunidade feita para economizar com mais praticidade</h2>
+          <p class="section-copy">
+            O grupo foi pensado para mães que gostam de promoções boas, rápidas de conferir e fáceis de aproveitar no celular.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <p class="stat-value counter-value" data-target="5000" data-suffix="+">0</p>
+            <p class="stat-label">mães de olho nas oportunidades todos os dias</p>
+          </article>
+
+          <article class="stat-card reveal">
+            <p class="stat-value counter-value" data-target="500" data-prefix="R$ ">R$ 0</p>
+            <p class="stat-label">economizados em média por quem aproveita as ofertas certas</p>
+          </article>
+
+          <article class="stat-card reveal">
+            <p class="stat-value counter-value" data-target="24" data-suffix="h">0</p>
+            <p class="stat-label">de chances para encontrar novidades e alertas relâmpago</p>
+          </article>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <span class="testimonial-badge">✓ Membro verificado</span>
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p>
+              “Eu tava precisando repor fralda e apareceu Pampers com um preço bem melhor do que eu pago aqui perto de casa. Nesse pedido eu economizei uns 40 e poucos reais fácil, já virou grupo que eu olho todo dia.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar avatar--amanda" aria-hidden="true">A</div>
+              <div class="author-meta">
+                <span class="author-name">Amanda S.</span>
+                <span class="author-note">Mãe de um menino de 2 anos</span>
+                <span class="author-time">há 3 dias</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <span class="testimonial-badge">✓ Membro verificado</span>
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p>
+              “No começo achei que podia ser aquelas promoções que nunca dão certo, mas resolvi testar numa mamadeira e num kit de body. Chegou tudo certinho e até antes do prazo. Pra mãe de primeira viagem isso dá um alívio, né.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar avatar--renata" aria-hidden="true">R</div>
+              <div class="author-meta">
+                <span class="author-name">Renata M.</span>
+                <span class="author-note">Mãe de primeira viagem</span>
+                <span class="author-time">há 1 semana</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <span class="testimonial-badge">✓ Membro verificado</span>
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p>
+              “Comprei um brinquedinho e um pacote de lenço num achado que valeu muito a pena. Depois que finalizei já mandei o link pra minha cunhada na mesma hora porque ela também tava atrás dessas coisinhas pro bebê.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar avatar--camila" aria-hidden="true">C</div>
+              <div class="author-meta">
+                <span class="author-name">Camila P.</span>
+                <span class="author-note">Mãe de bebê e criança pequena</span>
+                <span class="author-time">há 2 semanas</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="cta-final">
+      <div class="container final-cta-inner reveal">
+        <div class="section-tag">Entre agora</div>
+        <h2 class="section-title">Seu próximo achadinho para bebê pode estar a um clique de distância</h2>
+        <p class="section-copy">
+          Entre no grupo da Cupomin e comece a receber promoções infantis escolhidas para quem quer cuidar bem sem gastar além do necessário.
+        </p>
+        <div style="margin-top: 1.7rem;">
+          <a
+            class="cta-button cta-button--large pulse"
+            href="https://chat.whatsapp.com/KNEoRWEffjGEBkV5vLSP8K"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="cta-icon" aria-hidden="true">
+              <use href="#icon-whatsapp"></use>
+            </svg>
+            Quero entrar no grupo da Cupomin
+          </a>
+          <p class="microcopy">É grátis, leva poucos segundos e você pode sair quando quiser.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">
+          <img src="cupomin-logo.png" alt="">
+        </span>
+        <span>Cupomin</span>
+      </div>
+      <a class="footer-social" href="https://www.instagram.com/cupominn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Cupominn">
+        <svg class="footer-icon" aria-hidden="true">
+          <use href="#icon-instagram"></use>
+        </svg>
+        <span>@cupominn</span>
+      </a>
+      <p class="footer-copy">© 2025 Cupomin · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const header = document.querySelector(".site-header");
+      const revealItems = document.querySelectorAll(".reveal");
+      const counters = document.querySelectorAll(".counter-value");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function updateHeaderState() {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+      }
+
+      function setCounterValue(element, value) {
+        const prefix = element.dataset.prefix || "";
+        const suffix = element.dataset.suffix || "";
+        element.textContent = prefix + new Intl.NumberFormat("pt-BR").format(value) + suffix;
+      }
+
+      function animateCounter(element) {
+        const target = Number(element.dataset.target || 0);
+        const duration = 1800;
+        const start = performance.now();
+
+        function step(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(target * eased);
+
+          setCounterValue(element, value);
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      updateHeaderState();
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+      if (reducedMotion) {
+        revealItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+
+        counters.forEach(function (counter) {
+          setCounterValue(counter, Number(counter.dataset.target || 0));
+        });
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.16
+      });
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+
+      const counterObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          counters.forEach(function (counter) {
+            animateCounter(counter);
+          });
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.35
+      });
+
+      const socialProofSection = document.querySelector(".js-counters");
+      if (socialProofSection) {
+        counterObserver.observe(socialProofSection);
+      }
+    }());
+  </script>
+</body>
+</html>
